@@ -24,3 +24,11 @@ model.add(tf.layers.maxPooling2d({
   poolSize: [3,3],
   strides: [2,2]
 }));
+
+model.add(tf.layers.conv2d({
+  kernelSize: 5,
+  filters: 256,
+  strides: 4,
+  activation: 'relu',
+  kernelInitializer: 'varianceScaling'
+}));
