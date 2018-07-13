@@ -41,13 +41,22 @@ model.add(tf.layers.conv2d({
 model.add(tf.layers.maxPooling2d({
   poolSize: [3,3],
   strides: [2,2]
-}))
+}));
 
 // The third convolutional layer
 model.add(tf.layers.conv2d({
   kernelSize: 3,
   filters: 384,
   strides: 4,
-  activation: 'relu'
+  activation: 'relu',
   kernelInitializer: 'varianceScaling'
-}))
+}));
+
+// The fourth convolutional layer
+model.add(tf.layers.conv2d({
+  kernelSize: 3,
+  filters: 384,
+  strides: 4,
+  activation: 'relu',
+  kernelInitializer: 'varianceScaling'
+}));
