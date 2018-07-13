@@ -32,3 +32,8 @@ model.add(tf.layers.conv2d({
   activation: 'relu',
   kernelInitializer: 'varianceScaling'
 }));
+
+model.add(tf.layers.maxPooling2d({
+  poolSize: [3,3],
+  strides: [2,2]
+}))
